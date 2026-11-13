@@ -1,0 +1,154 @@
+{
+  "type": "synthetic_price_card_benchmark",
+  "engine": "Tesseract.js 7 / rus+kaz+eng",
+  "n": 12,
+  "exact_price_accuracy": 1,
+  "mean_latency_ms": 118,
+  "limitation": "12 generated labels, not real shop photos. Confidence is not price accuracy. Human confirmation required.",
+  "results": [
+    {
+      "case": 0,
+      "fixture": "synthetic clean",
+      "expected": 499,
+      "recognized_candidates": [
+        499
+      ],
+      "correct": true,
+      "confidence": 93,
+      "latency_ms": 276,
+      "text": "МОЛОКО\n499 KZT\n"
+    },
+    {
+      "case": 1,
+      "fixture": "synthetic clean",
+      "expected": 419,
+      "recognized_candidates": [
+        419
+      ],
+      "correct": true,
+      "confidence": 92,
+      "latency_ms": 99,
+      "text": "41 9 KZT\n"
+    },
+    {
+      "case": 2,
+      "fixture": "synthetic clean",
+      "expected": 916,
+      "recognized_candidates": [
+        916
+      ],
+      "correct": true,
+      "confidence": 92,
+      "latency_ms": 85,
+      "text": "91 6 KZT\n"
+    },
+    {
+      "case": 3,
+      "fixture": "synthetic clean",
+      "expected": 590,
+      "recognized_candidates": [
+        590
+      ],
+      "correct": true,
+      "confidence": 93,
+      "latency_ms": 77,
+      "text": "59 0 KZT\n"
+    },
+    {
+      "case": 4,
+      "fixture": "synthetic clean",
+      "expected": 97,
+      "recognized_candidates": [
+        97
+      ],
+      "correct": true,
+      "confidence": 91,
+      "latency_ms": 96,
+      "text": "СОЛЬ\n9 7 KZT\n"
+    },
+    {
+      "case": 5,
+      "fixture": "synthetic clean",
+      "expected": 203,
+      "recognized_candidates": [
+        203
+      ],
+      "correct": true,
+      "confidence": 92,
+      "latency_ms": 123,
+      "text": "КАРТОФЕЛЬ\n2 0 3 KZT\n"
+    },
+    {
+      "case": 6,
+      "fixture": "synthetic rotated/blurred",
+      "expected": 674,
+      "recognized_candidates": [
+        674
+      ],
+      "correct": true,
+      "confidence": 92,
+      "latency_ms": 97,
+      "text": "674 KZT\n"
+    },
+    {
+      "case": 7,
+      "fixture": "synthetic rotated/blurred",
+      "expected": 391,
+      "recognized_candidates": [
+        391
+      ],
+      "correct": true,
+      "confidence": 92,
+      "latency_ms": 89,
+      "text": "39 1 KZT\n"
+    },
+    {
+      "case": 8,
+      "fixture": "synthetic rotated/blurred",
+      "expected": 542,
+      "recognized_candidates": [
+        542
+      ],
+      "correct": true,
+      "confidence": 71,
+      "latency_ms": 128,
+      "text": "542 к\n"
+    },
+    {
+      "case": 9,
+      "fixture": "synthetic rotated/blurred",
+      "expected": 103,
+      "recognized_candidates": [
+        103
+      ],
+      "correct": true,
+      "confidence": 78,
+      "latency_ms": 118,
+      "text": "103 кт\n"
+    },
+    {
+      "case": 10,
+      "fixture": "synthetic rotated/blurred",
+      "expected": 894,
+      "recognized_candidates": [
+        894
+      ],
+      "correct": true,
+      "confidence": 75,
+      "latency_ms": 113,
+      "text": "894 к\n"
+    },
+    {
+      "case": 11,
+      "fixture": "synthetic rotated/blurred",
+      "expected": 6050,
+      "recognized_candidates": [
+        6050
+      ],
+      "correct": true,
+      "confidence": 74,
+      "latency_ms": 120,
+      "text": "6050 кт\n"
+    }
+  ]
+}

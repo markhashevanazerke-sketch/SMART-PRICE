@@ -1,6 +1,7 @@
 // Reproducible synthetic benchmark. Labels describe simulated latent events, not the baseline rule.
 const fs=require('node:fs'),crypto=require('node:crypto');let seed=734123;const rand=()=>{seed=(Math.imul(1664525,seed)+1013904223)>>>0;return seed/4294967296;};
-const features=(c,p,m)=>[1,p?Math.min(3,Math.abs(c/p-1)):0,m.length?Math.min(3,Math.abs(c/[...m].sort((a,b)=>a-b)[Math.floor(m.length/2)]-1)):0,p?1:0,m.length>=3?1:0];
+const median=m=>{const sorted=[...m].sort((a,b)=>a-b),middle=Math.floor(sorted.length/2);return sorted.length?(sorted.length%2?sorted[middle]:(sorted[middle-1]+sorted[middle])/2):null;};
+const features=(c,p,m)=>[1,p?Math.min(3,Math.abs(c/p-1)):0,median(m)?Math.min(3,Math.abs(c/median(m)-1)):0,p?1:0,m.length>=3?1:0];
 const score=(x,w)=>1/(1+Math.exp(-x.reduce((s,v,i)=>s+v*w[i],0)));
 function dataset(groups){const out=[];for(let group=0;group<groups;group++){const base=100+rand()*2000;for(let i=0;i<8;i++){const event=rand()<.28,drift=(rand()-.5)*.20,previous=rand()<.12?null:base*(1+(rand()-.5)*.08),market=rand()<.15?[]:Array.from({length:5},()=>base*(1+(rand()-.5)*.14));const amount=base*(1+drift)*(event?1+(rand()<.18?-1:1)*(.13+rand()*.65):1);out.push({group,amount,previous,market,label:+event,x:features(amount,previous,market)});}}return out;}
 // Each partition has independent product/store groups; validation chooses the threshold only.

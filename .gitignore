@@ -47,3 +47,6 @@ services/pos-gateway/bin/
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated from pinned npm OCR dependencies during prebuild
+/public/smartprice/ocr/

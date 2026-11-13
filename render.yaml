@@ -1,0 +1,19 @@
+# Deployment creates paid web service + persistent disk. Review Render pricing before applying.
+services:
+  - type: web
+    name: smart-price
+    runtime: docker
+    dockerfilePath: ./Dockerfile.smartprice
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 3005
+      - key: SMARTPRICE_DEMO_LOGIN
+        value: "false"
+      - key: SMARTPRICE_DB
+        value: /app/data/smartprice.sqlite
+    disk:
+      name: smart-price-data
+      mountPath: /app/data
+      sizeGB: 1

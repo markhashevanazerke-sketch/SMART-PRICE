@@ -67,7 +67,7 @@ oil,store-0,1100,2026-11-13T10:00:00.000Z,manual
 Не импортируйте строку с датой позже текущего времени. Для просмотра ID продуктов используйте диалог импорта или API data.
 
 ## Сохранённая архитектура
-См. `docs/smartprice/ARCHITECTURE.md` и сценарий `docs/smartprice/PITCH.md`.
+См. `docs/smartprice/ARCHITECTURE.md`, [4-минутный сценарий защиты](docs/smartprice/PITCH.md), [гайд по демонстрации для жюри](docs/smartprice/JURY_GUIDE.md) и [слайды GOVTECH HACKATHON](docs/smartprice/SMART-PRICE_GOVTECH_PITCH.pptx).
 
 
 

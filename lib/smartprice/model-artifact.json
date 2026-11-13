@@ -1,0 +1,45 @@
+{
+  "version": "synthetic-logistic-v1",
+  "seed": 734123,
+  "features": [
+    "bias",
+    "absolute_previous_change",
+    "absolute_market_deviation",
+    "has_previous",
+    "has_3_market_prices"
+  ],
+  "weights": [
+    -1.4561718215139199,
+    8.350145829633874,
+    7.90094106800778,
+    -1.0667788318962594,
+    -0.9943146786800249
+  ],
+  "threshold": 0.2,
+  "training_samples": 3200,
+  "validation_samples": 800,
+  "test": {
+    "n": 1200,
+    "tp": 317,
+    "fp": 2,
+    "tn": 857,
+    "fn": 24,
+    "precision": 0.9937304075235109,
+    "recall": 0.9296187683284457,
+    "f1": 0.9606060606060606,
+    "accuracy": 0.9783333333333334
+  },
+  "baseline": {
+    "n": 1200,
+    "tp": 300,
+    "fp": 0,
+    "tn": 859,
+    "fn": 41,
+    "precision": 1,
+    "recall": 0.8797653958944281,
+    "f1": 0.9360374414976599,
+    "accuracy": 0.9658333333333333
+  },
+  "dataset_sha256": "35bcf4eb24133fdec79aa8a0ef7f5efee981d8266674495e015d2c82e7c2702e",
+  "limitations": "Synthetic independently generated product/store groups. Not a field accuracy estimate. No claim of superiority on real observations."
+}
